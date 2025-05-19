@@ -1,0 +1,40 @@
+{
+  "name": "coding---practise",
+  "version": "1.0.0",
+  "description": "This is my first  Git Repository.\r <br>\r Author-(Khushi)",
+  "main": "index3 (2).js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kh-jpg/coding---practise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kh-jpg/coding---practise/issues"
+  },
+  "homepage": "https://github.com/kh-jpg/coding---practise#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-validation": "^4.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "multer": "^1.4.5-lts.1",
+    "puppeteer": "^24.4.0",
+    "redis": "^4.7.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^3.1.9"
+  }
+}

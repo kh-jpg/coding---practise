@@ -1,0 +1,362 @@
+2025-03-04 16:26:23 ERROR [controller/loginController] :Login function execution start 
+2025-03-04 16:26:23 ERROR [controller/loginController] :username Found 
+2025-03-04 16:26:23 ERROR [controller/loginController] :valid password 
+2025-03-04 16:26:23 ERROR [controller/loginController] : successfully send response  
+2025-03-04 16:30:44 ERROR [controller/loginController] :Login function execution start 
+2025-03-04 16:30:44 ERROR [controller/loginController] :username Found 
+2025-03-04 16:30:44 ERROR [controller/loginController] :valid password 
+2025-03-04 16:30:44 ERROR [controller/loginController] : successfully send response  
+2025-03-04 16:31:49 INFO [controller/signupController] :signup function execution start 
+2025-03-04 16:32:09 INFO [controller/signupController] :signup function execution start 
+2025-03-04 16:33:14 ERROR [controller/loginController] :Login function execution start 
+2025-03-04 16:33:14 INFO [controller/loginController] :username Found 
+2025-03-04 16:33:14 INFO [controller/loginController] :valid password 
+2025-03-04 16:33:14 INFO [controller/loginController] : successfully send response  
+2025-03-04 16:34:21 INFO [controller/loginController] :Login function execution start 
+2025-03-04 16:34:21 INFO [controller/loginController] :username Found 
+2025-03-04 16:34:21 INFO [controller/loginController] :valid password 
+2025-03-04 16:34:21 INFO [controller/loginController] : successfully send response  
+2025-03-05 01:39:42 INFO [controller/loginController] :Login function execution start 
+2025-03-05 01:39:42 INFO [controller/loginController] :username Found 
+2025-03-05 01:39:42 INFO [controller/loginController] :valid password 
+2025-03-05 01:39:42 INFO [controller/loginController] : successfully send response  
+2025-03-05 01:40:07 INFO [controller/loginController] :Inside createfood function start 
+2025-03-05 01:40:07 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-05 01:44:56 INFO [controller/loginController] :Inside createfood function start 
+2025-03-05 01:44:56 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-05 01:45:58 INFO [controller/loginController] :Inside createfood function start 
+2025-03-05 01:45:58 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-05 01:53:09 INFO [controller/signupController] :signup function execution start 
+2025-03-05 01:53:39 INFO [controller/signupController] :signup function execution start 
+2025-03-05 01:54:09 INFO [controller/signupController] :signup function execution start 
+2025-03-05 01:55:33 INFO [controller/loginController] :Inside createfood function start 
+2025-03-05 01:55:33 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-05 01:56:23 INFO [controller/loginController] :Inside createfood function start 
+2025-03-05 01:56:23 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-05 01:58:52 INFO [controller/loginController] :Inside createfood function start 
+2025-03-05 01:58:52 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-05 02:21:11 INFO [controller/loginController] :send otp  function execution start 
+2025-03-05 02:21:11 INFO [controller/loginController] :username found 
+2025-03-05 02:21:11 INFO [controller/loginController] :successfully send response 
+2025-03-05 02:22:22 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 02:22:22 INFO [controller/loginController] :Missing Fields 
+2025-03-05 02:28:34 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 02:28:34 INFO [controller/loginController] :searching for otp in database 
+2025-03-05 02:28:34 INFO [controller/loginController] :otp not found or expired 
+2025-03-05 02:35:38 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 02:35:38 INFO [controller/loginController] :searching for otp in database 
+2025-03-05 02:35:38 INFO [controller/loginController] :otp not found or expired 
+2025-03-05 02:35:51 INFO [controller/loginController] :Login function execution start 
+2025-03-05 02:35:51 INFO [controller/loginController] :username Found 
+2025-03-05 02:35:51 INFO [controller/loginController] :valid password 
+2025-03-05 02:35:51 INFO [controller/loginController] : successfully send response  
+2025-03-05 03:00:11 INFO [controller/loginController] :send otp  function execution start 
+2025-03-05 03:00:11 INFO [controller/loginController] :username found 
+2025-03-05 03:00:11 INFO [controller/loginController] :successfully send response 
+2025-03-05 03:01:17 INFO [controller/loginController] :send otp  function execution start 
+2025-03-05 03:01:17 INFO [controller/loginController] :username found 
+2025-03-05 03:01:17 INFO [controller/loginController] :successfully send response 
+2025-03-05 03:06:33 INFO [controller/loginController] :send otp  function execution start 
+2025-03-05 03:06:33 INFO [controller/loginController] :username found 
+2025-03-05 03:06:33 INFO [controller/loginController] :successfully send response 
+2025-03-05 14:16:54 INFO [controller/loginController] :send otp  function execution start 
+2025-03-05 14:16:54 INFO [controller/loginController] :username found 
+2025-03-05 14:16:54 INFO [controller/loginController] :successfully send response 
+2025-03-05 14:17:12 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 14:17:12 INFO [controller/loginController] :searching for otp in database 
+2025-03-05 14:17:12 INFO [controller/loginController] :otp not found or expired 
+2025-03-05 14:18:17 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 14:18:17 INFO [controller/loginController] :searching for otp in database 
+2025-03-05 14:18:17 INFO [controller/loginController] :otp not found or expired 
+2025-03-05 14:18:52 INFO [controller/loginController] :Login function execution start 
+2025-03-05 14:18:52 INFO [controller/loginController] :username Found 
+2025-03-05 14:18:52 INFO [controller/loginController] :valid password 
+2025-03-05 14:18:52 INFO [controller/loginController] : successfully send response  
+2025-03-05 14:20:05 INFO [controller/loginController] :send otp  function execution start 
+2025-03-05 14:20:05 INFO [controller/loginController] :username found 
+2025-03-05 14:20:05 INFO [controller/loginController] :successfully send response 
+2025-03-05 14:20:58 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 14:20:58 INFO [controller/loginController] :searching for otp in database 
+2025-03-05 14:20:58 INFO [controller/loginController] :otp not found or expired 
+2025-03-05 14:41:29 INFO [controller/loginController] :verify otp function execution start 
+2025-03-05 14:41:29 INFO [controller/loginController] :searching for otp in database 
+2025-03-05 14:41:29 INFO [controller/loginController] :otp not found or expired 
+2025-03-06 05:40:57 INFO [controller/loginController] :send otp  function execution start 
+2025-03-06 05:40:57 INFO [controller/loginController] :username found 
+2025-03-06 05:40:57 INFO [controller/loginController] :successfully send response 
+2025-03-06 05:41:10 INFO [controller/loginController] :verifyotp function execution start 
+2025-03-06 05:41:10 INFO [controller/loginController] :username Found 
+2025-03-06 05:41:10 INFO [controller/loginController] :Execpetion occur Error: data and hash arguments required 
+2025-03-06 05:43:14 INFO [controller/loginController] :verifyotp function execution start 
+2025-03-06 05:43:14 INFO [controller/loginController] :username Found 
+2025-03-06 05:43:14 INFO [controller/loginController] :Execpetion occur Error: data and hash arguments required 
+2025-03-06 14:06:56 INFO [controller/loginController] :send otp  function execution start 
+2025-03-06 14:06:57 INFO [controller/loginController] :username found 
+2025-03-06 14:06:57 INFO [controller/loginController] :successfully send response 
+2025-03-06 14:16:10 INFO [controller/loginController] :send otp  function execution start 
+2025-03-06 14:16:10 INFO [controller/loginController] :username found 
+2025-03-06 14:16:10 INFO [controller/loginController] :successfully send response 
+2025-03-07 03:20:48 INFO [controller/loginController] :Login function execution start 
+2025-03-07 03:20:48 INFO [controller/loginController] :username Found 
+2025-03-07 03:20:48 INFO [controller/loginController] :valid password 
+2025-03-07 03:20:48 INFO [controller/loginController] : successfully send response  
+2025-03-07 03:21:09 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:21:09 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:21:13 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:21:13 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:21:24 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:21:24 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:23:07 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:23:07 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:23:14 INFO [controller/loginController] :Login function execution start 
+2025-03-07 03:23:14 INFO [controller/loginController] :username Found 
+2025-03-07 03:23:14 INFO [controller/loginController] :valid password 
+2025-03-07 03:23:14 INFO [controller/loginController] : successfully send response  
+2025-03-07 03:23:32 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:23:32 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:27:09 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:27:09 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:30:16 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:30:16 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:30:18 INFO [controller/loginController] :Inside createfood function start 
+2025-03-07 03:30:18 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:32:39 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:32:42 INFO [controller/loginController] :Execpetion occur TypeError: Cannot read properties of undefined (reading 'validatefood') 
+2025-03-07 03:36:30 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:42:20 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:44:02 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:45:24 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:46:21 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:49:31 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:49:43 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:50:57 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:51:37 INFO [controller/logController] :log controller function execution start 
+2025-03-07 03:54:46 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:00:25 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:01:47 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:02:56 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:04:19 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:05:40 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:07:59 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:39:43 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:50:03 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:50:29 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:52:29 INFO [controller/logController] :log controller function execution start 
+2025-03-07 04:53:57 INFO [controller/logController] :log controller function execution start 
+2025-03-12 04:54:17 INFO [controller/loginController] :Login function execution start 
+2025-03-12 04:54:17 INFO [controller/loginController] :username Found 
+2025-03-12 04:54:18 INFO [controller/loginController] :valid password 
+2025-03-12 04:54:18 INFO [controller/loginController] : successfully send response  
+2025-03-18 14:27:27 INFO [controller/loginController] :Login function execution start 
+2025-03-18 14:27:27 INFO [controller/loginController] :username Found 
+2025-03-18 14:27:27 INFO [controller/loginController] :valid password 
+2025-03-18 14:27:27 INFO [controller/loginController] : successfully send response  
+2025-03-19 01:39:38 INFO [controller/loginController] :Login function execution start 
+2025-03-19 01:39:38 INFO [controller/loginController] :username Found 
+2025-03-19 01:39:38 INFO [controller/loginController] :valid password 
+2025-03-19 01:39:38 INFO [controller/loginController] : successfully send response  
+2025-03-20 14:54:08 INFO [controller/loginController] :Login function execution start 
+2025-03-20 14:54:08 INFO [controller/loginController] :username Found 
+2025-03-20 14:54:08 INFO [controller/loginController] :valid password 
+2025-03-20 14:54:08 INFO [controller/loginController] : successfully send response  
+2025-03-21 00:59:52 INFO [controller/loginController] :Login function execution start 
+2025-03-21 00:59:52 INFO [controller/loginController] :username Found 
+2025-03-21 00:59:52 INFO [controller/loginController] :valid password 
+2025-03-21 00:59:52 INFO [controller/loginController] : successfully send response  
+2025-03-21 09:00:13 INFO [controller/loginController] :Login function execution start 
+2025-03-21 09:00:13 INFO [controller/loginController] :username Found 
+2025-03-21 09:00:13 INFO [controller/loginController] :valid password 
+2025-03-21 09:00:13 INFO [controller/loginController] : successfully send response  
+2025-03-21 14:59:45 INFO [controller/loginController] :Login function execution start 
+2025-03-21 14:59:45 INFO [controller/loginController] :username Found 
+2025-03-21 14:59:45 INFO [controller/loginController] :valid password 
+2025-03-21 14:59:45 INFO [controller/loginController] : successfully send response  
+2025-03-22 14:55:42 INFO [controller/loginController] :Login function execution start 
+2025-03-22 14:55:42 INFO [controller/loginController] :username Found 
+2025-03-22 14:55:42 INFO [controller/loginController] :valid password 
+2025-03-22 14:55:42 INFO [controller/loginController] : successfully send response  
+2025-03-24 14:27:10 INFO [controller/loginController] :Login function execution start 
+2025-03-24 14:27:11 INFO [controller/loginController] :username Found 
+2025-03-24 14:27:11 INFO [controller/loginController] :valid password 
+2025-03-24 14:27:11 INFO [controller/loginController] : successfully send response  
+2025-03-25 14:41:42 INFO [controller/loginController] :Login function execution start 
+2025-03-25 14:41:42 INFO [controller/loginController] :username Found 
+2025-03-25 14:41:42 INFO [controller/loginController] :valid password 
+2025-03-25 14:41:42 INFO [controller/loginController] : successfully send response  
+2025-04-07 17:03:17 INFO [controller/signupController] :signup function execution start 
+2025-04-07 17:04:06 INFO [controller/signupController] :signup function execution start 
+2025-04-08 08:21:28 INFO [controller/signupController] :signup function execution start 
+2025-04-08 08:21:44 INFO [controller/signupController] :signup function execution start 
+2025-04-08 08:22:12 INFO [controller/signupController] :signup function execution start 
+2025-04-08 08:57:22 INFO [controller/signupController] :signup function execution start 
+2025-04-08 08:57:51 INFO [controller/signupController] :signup function execution start 
+2025-04-08 14:54:52 INFO [controller/signupController] :signup function execution start 
+2025-04-08 14:55:04 INFO [controller/signupController] :signup function execution start 
+2025-04-08 15:01:02 INFO [controller/signupController] :signup function execution start 
+2025-04-11 00:53:36 INFO [controller/signupController] :signup function execution start 
+2025-04-11 01:09:08 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:09:08 INFO [controller/loginController] :username Found 
+2025-04-11 01:09:08 INFO [controller/loginController] :valid password 
+2025-04-11 01:09:08 INFO [controller/loginController] : successfully send response  
+2025-04-11 01:12:12 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:12:12 INFO [controller/loginController] :username Found 
+2025-04-11 01:12:12 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:12:21 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:12:21 INFO [controller/loginController] :username Found 
+2025-04-11 01:12:21 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:12:22 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:12:22 INFO [controller/loginController] :username Found 
+2025-04-11 01:12:22 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:15:46 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:15:46 INFO [controller/loginController] :username Found 
+2025-04-11 01:15:47 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:19:24 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:19:24 INFO [controller/loginController] :username Found 
+2025-04-11 01:19:24 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:19:25 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:19:25 INFO [controller/loginController] :username Found 
+2025-04-11 01:19:26 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:21:39 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:21:39 INFO [controller/loginController] :username Found 
+2025-04-11 01:21:39 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:24:53 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:24:53 INFO [controller/loginController] :username Found 
+2025-04-11 01:24:53 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:25:58 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:25:58 INFO [controller/loginController] :username Found 
+2025-04-11 01:25:58 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:26:10 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:26:10 INFO [controller/loginController] :username Found 
+2025-04-11 01:26:10 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:30:40 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:30:40 INFO [controller/loginController] :username Found 
+2025-04-11 01:30:40 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:30:46 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:30:46 INFO [controller/loginController] :username Found 
+2025-04-11 01:30:46 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:30:47 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:30:47 INFO [controller/loginController] :username Found 
+2025-04-11 01:30:47 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:34:02 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:34:02 INFO [controller/loginController] :username Found 
+2025-04-11 01:34:02 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:34:10 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:34:10 INFO [controller/loginController] :username Found 
+2025-04-11 01:34:10 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:38:26 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:38:26 INFO [controller/loginController] :username Found 
+2025-04-11 01:38:26 INFO [controller/loginController] :valid password 
+2025-04-11 01:38:26 INFO [controller/loginController] : successfully send response  
+2025-04-11 01:48:44 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:48:44 INFO [controller/loginController] :username Found 
+2025-04-11 01:48:44 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:48:49 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:48:49 INFO [controller/loginController] :username Found 
+2025-04-11 01:48:49 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:49:12 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:49:12 INFO [controller/loginController] :username Found 
+2025-04-11 01:49:12 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:50:08 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:50:08 INFO [controller/loginController] :username Found 
+2025-04-11 01:50:08 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:50:45 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:50:45 INFO [controller/loginController] :username Found 
+2025-04-11 01:50:45 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:54:47 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:54:47 INFO [controller/loginController] :username Found 
+2025-04-11 01:54:47 ERROR [controller/loginController] :wrong password 
+2025-04-11 01:55:27 INFO [controller/loginController] :Login function execution start 
+2025-04-11 01:55:27 INFO [controller/loginController] :username Found 
+2025-04-11 01:55:27 ERROR [controller/loginController] :wrong password 
+2025-04-11 14:37:25 INFO [controller/loginController] :Login function execution start 
+2025-04-11 14:37:25 INFO [controller/loginController] :username Found 
+2025-04-11 14:37:25 INFO [controller/loginController] :valid password 
+2025-04-11 14:37:25 INFO [controller/loginController] : successfully send response  
+2025-04-11 14:37:44 INFO [controller/loginController] :Login function execution start 
+2025-04-11 14:37:44 INFO [controller/loginController] :username Found 
+2025-04-11 14:37:44 ERROR [controller/loginController] :wrong password 
+2025-04-11 14:50:10 INFO [controller/loginController] :Login function execution start 
+2025-04-11 14:50:10 INFO [controller/loginController] :username Found 
+2025-04-11 14:50:10 ERROR [controller/loginController] :wrong password 
+2025-04-11 14:50:27 INFO [controller/loginController] :Login function execution start 
+2025-04-11 14:50:27 INFO [controller/loginController] :username Found 
+2025-04-11 14:50:27 ERROR [controller/loginController] :wrong password 
+2025-04-11 14:52:15 INFO [controller/signupController] :signup function execution start 
+2025-04-11 14:52:34 INFO [controller/signupController] :signup function execution start 
+2025-04-11 14:53:33 INFO [controller/loginController] :Login function execution start 
+2025-04-11 14:53:33 INFO [controller/loginController] :username Found 
+2025-04-11 14:53:33 INFO [controller/loginController] :valid password 
+2025-04-11 14:53:33 INFO [controller/loginController] : successfully send response  
+2025-04-11 14:54:33 INFO [controller/loginController] :Login function execution start 
+2025-04-11 14:54:33 INFO [controller/loginController] :username Found 
+2025-04-11 14:54:33 INFO [controller/loginController] :valid password 
+2025-04-11 14:54:33 INFO [controller/loginController] : successfully send response  
+2025-04-15 05:17:35 INFO [controller/loginController] :Login function execution start 
+2025-04-15 05:17:35 INFO [controller/loginController] :username Found 
+2025-04-15 05:17:35 INFO [controller/loginController] :valid password 
+2025-04-15 05:17:35 INFO [controller/loginController] : successfully send response  
+2025-04-15 05:17:54 INFO [controller/loginController] :Login function execution start 
+2025-04-15 05:17:54 INFO [controller/loginController] :username Found 
+2025-04-15 05:17:55 ERROR [controller/loginController] :wrong password 
+2025-04-15 05:20:58 INFO [controller/loginController] :Login function execution start 
+2025-04-15 05:20:58 INFO [controller/loginController] :username Found 
+2025-04-15 05:20:58 ERROR [controller/loginController] :wrong password 
+2025-04-15 05:24:56 INFO [controller/loginController] :Login function execution start 
+2025-04-15 05:24:56 ERROR [controller/loginController] :wrong username 
+2025-04-15 05:26:59 INFO [controller/loginController] :Login function execution start 
+2025-04-15 05:26:59 INFO [controller/loginController] :username Found 
+2025-04-15 05:26:59 INFO [controller/loginController] :valid password 
+2025-04-15 05:26:59 INFO [controller/loginController] : successfully send response  
+2025-04-15 05:27:22 INFO [controller/loginController] :Login function execution start 
+2025-04-15 05:27:22 ERROR [controller/loginController] :wrong username 
+2025-04-15 14:37:26 INFO [controller/loginController] :Login function execution start 
+2025-04-15 14:37:26 INFO [controller/loginController] :username Found 
+2025-04-15 14:37:26 INFO [controller/loginController] :valid password 
+2025-04-15 14:37:26 INFO [controller/loginController] : successfully send response  
+2025-04-15 14:38:01 INFO [controller/loginController] :Login function execution start 
+2025-04-15 14:38:01 ERROR [controller/loginController] :wrong username 
+2025-04-16 14:43:12 INFO [controller/loginController] :Login function execution start 
+2025-04-16 14:43:12 INFO [controller/loginController] :username Found 
+2025-04-16 14:43:12 INFO [controller/loginController] :valid password 
+2025-04-16 14:43:12 INFO [controller/loginController] : successfully send response  
+2025-04-22 01:35:00 INFO [controller/loginController] :Login function execution start 
+2025-04-22 01:35:00 INFO [controller/loginController] :username Found 
+2025-04-22 01:35:00 INFO [controller/loginController] :valid password 
+2025-04-22 01:35:00 INFO [controller/loginController] : successfully send response  
+2025-04-22 01:38:17 INFO [controller/loginController] :Login function execution start 
+2025-04-22 01:38:17 INFO [controller/loginController] :username Found 
+2025-04-22 01:38:17 INFO [controller/loginController] :valid password 
+2025-04-22 01:38:17 INFO [controller/loginController] : successfully send response  
+2025-04-22 01:41:03 INFO [controller/loginController] :Login function execution start 
+2025-04-22 01:41:03 INFO [controller/loginController] :username Found 
+2025-04-22 01:41:03 INFO [controller/loginController] :valid password 
+2025-04-22 01:41:03 INFO [controller/loginController] : successfully send response  
+2025-04-22 01:41:41 INFO [controller/signupController] :signup function execution start 
+2025-04-24 15:33:36 INFO [controller/loginController] :Login function execution start 
+2025-04-24 15:33:36 INFO [controller/loginController] :username Found 
+2025-04-24 15:33:37 INFO [controller/loginController] :valid password 
+2025-04-24 15:33:37 INFO [controller/loginController] : successfully send response  
+2025-04-24 16:51:26 INFO [controller/loginController] :Login function execution start 
+2025-04-24 16:51:26 INFO [controller/loginController] :username Found 
+2025-04-24 16:51:26 INFO [controller/loginController] :valid password 
+2025-04-24 16:51:26 INFO [controller/loginController] : successfully send response  
+2025-04-25 02:32:38 INFO [controller/loginController] :Login function execution start 
+2025-04-25 02:32:38 INFO [controller/loginController] :username Found 
+2025-04-25 02:32:38 INFO [controller/loginController] :valid password 
+2025-04-25 02:32:38 INFO [controller/loginController] : successfully send response  
+2025-04-25 02:50:13 INFO [controller/loginController] :Login function execution start 
+2025-04-25 02:50:13 INFO [controller/loginController] :username Found 
+2025-04-25 02:50:13 INFO [controller/loginController] :valid password 
+2025-04-25 02:50:13 INFO [controller/loginController] : successfully send response  
+2025-04-25 15:35:33 INFO [controller/loginController] :Login function execution start 
+2025-04-25 15:35:33 INFO [controller/loginController] :username Found 
+2025-04-25 15:35:33 INFO [controller/loginController] :valid password 
+2025-04-25 15:35:33 INFO [controller/loginController] : successfully send response  
+2025-04-28 13:15:29 INFO [controller/loginController] :Login function execution start 
+2025-04-28 13:15:29 INFO [controller/loginController] :username Found 
+2025-04-28 13:15:29 INFO [controller/loginController] :valid password 
+2025-04-28 13:15:29 INFO [controller/loginController] : successfully send response  
+2025-04-28 13:16:01 INFO [controller/loginController] :Login function execution start 
+2025-04-28 13:16:01 INFO [controller/loginController] :username Found 
+2025-04-28 13:16:01 INFO [controller/loginController] :valid password 
+2025-04-28 13:16:01 INFO [controller/loginController] : successfully send response  

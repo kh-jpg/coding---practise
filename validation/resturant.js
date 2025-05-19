@@ -1,0 +1,20 @@
+const{Joi}=require('express-validation');
+//const Joi = require('joi');
+exports.resturantvalidation={
+    body:Joi.object({
+        title:Joi.string().optional,
+        name:Joi.string().required(),
+        email:Joi.string().required(),
+        mobile:Joi.number().required(),
+        address:Joi.string().required(),
+        openTime:Joi.string().optional(),
+        closeTime:Joi.string().optional(),
+        cusine:Joi.string().optional(),
+        rating:Joi.number().optional(),
+        state:Joi.string().optional(),
+        city:Joi.string().optional(),
+        isActive:Joi.string().optional(),
+        logoUrl:Joi.string().optional(),
+        coverImage:Joi.string().optional(),
+    })
+}

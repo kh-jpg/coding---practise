@@ -1,0 +1,11 @@
+ const{Joi}=require('express-validation');
+    exports.foodvalidation={
+        body:Joi.object({
+    resturantid:Joi.string().required(),
+    name:Joi.string().required(),
+    imageurl:Joi.string().optional(),
+    price:Joi.number().required(),
+    category:Joi.string().valid("veg","nonveg").required(),
+    rating:Joi.number().optional()
+})
+}

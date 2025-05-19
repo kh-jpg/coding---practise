@@ -1,0 +1,12 @@
+ const{Joi}=require('express-validation');
+    exports.coupanvalidation={
+        body:Joi.object({
+    coupanid:Joi.string().required(),
+    coupancode:Joi.string().required(),
+    expirydate:Joi.string().required(),
+    amount:Joi.number().required(),
+    resturantid:Joi.string().required(),
+    appliedamount:Joi.number().required(),
+    isActive:Joi.string().optional()
+})
+}
