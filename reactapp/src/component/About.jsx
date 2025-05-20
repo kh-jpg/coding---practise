@@ -13,7 +13,7 @@ function about() {
       {/* Professional Image */}
       <section className="flex justify-center mt-6">
         <img
-          src="/image.png"
+          src="../image.png"
           alt="Profile"
           className="rounded-full border-4 border-white shadow-lg  w-48 h-48"
         />

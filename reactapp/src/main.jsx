@@ -18,6 +18,7 @@ import Dashboard from './component/Dashboard'
  import RegistrationForm from './component/RegistrationForm'
  import BookBus from './component/BookBus'
  import About from './component/About'
+ import Portfolio from './component/Portfolio'
 
 
 
@@ -32,6 +33,7 @@ createRoot(document.getElementById('root')).render(
       <LoginForm/>   
             <Amazon/>
            <App/>
+           <About/>
         <BookBus/>
          <Login/>  
        <ResturantList/>
@@ -39,7 +41,7 @@ createRoot(document.getElementById('root')).render(
          <RegistrationForm/>
    <ChangePasswordForm/>*/}
      
-    <About/>
+   <Portfolio/>
    
 
     
