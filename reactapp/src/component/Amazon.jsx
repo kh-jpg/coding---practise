@@ -1,6 +1,8 @@
-import React,{useRef}from "react";
+//import React,{useRef} from "react";
+import React, { useRef, useEffect, useState } from 'react';
+
 import '../App.css'
-import { } from "framer-motion";
+//import { } from "framer-motion";
 //import { FaLocationDot, FaSearch, FaShospanspaningCart, FaBars } from 'react-icons/fa6';
 import { FaLocationDot } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
@@ -8,6 +10,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+//import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 
 const ProductCard = ({  items, linkText}) => {
   return (
@@ -28,152 +32,339 @@ const ProductCard = ({  items, linkText}) => {
       <a href="" className="text-blue-600 text-sm hover:underline block text-center mt-[2px]">{linkText}</a>
     </div>
 );
-}
-     
-  
-/*const ProductScroll = ({ products})=>{
-  const scrollRef = useRef(null);
+};
 
-  const scroll = (scrollOffset) => {
-    scrollRef.current.scrollBy({ left: scrollOffset, behavior: 'smooth' });
-  };*/
-
-  /*return (
-    <div className="relative w-full bg-white p-4">
-      {/* Left Button */
-   /*   <button
-        onClick={() => scroll(-600)}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full z-10 hover:bg-gray-900"
-      >
-        &lt;
-      </button>
-
-      {/* Scrollable Cards */
-     /* <div
-        ref={scrollRef}
-        className="flex overflow-x-scroll no-scrollbar scroll-smooth gap-4"
-      >
-        {products.map((product, index) => (
-          <div key={index} className="flex-shrink-0 w-48 bg-gray-100 rounded-lg shadow-md p-3">
-            <img src={product.img} alt={product.title} className="h-28 w-full object-contain mb-2" />
-            <h3 className="text-center font-semibold text-sm">{product.title}</h3>
-            <p className="text-center text-xs text-gray-600">{product.label}</p>
-            <a href={product.link} className="block text-center text-blue-600 text-sm mt-1 hover:underline">
-              {product.linkText}
-            </a>
+const ProductCard1 = ({  items,title}) => {
+  return (
+      <div className="bg-white p-6 shadow-md border rounded-md hover:shadow-lg transition-all duration-300 w-[330px] m-auto  ">
+          <h2 className='text-center text-lg font-bold text-gray-800 '>{title}</h2>
+      <div className="grid grid-cols-2 gap-4 mb-3 ">
+    
+        {items.map((item, index) => (
+          <div key={index} className="flex flex-col items-center text-center">
+          
+            <img src={item.img} className="w-[160px] h-[120px] object-contain mb-1 mx-auto" />
           </div>
         ))}
       </div>
-
-      {/* Right Button */
-      /*<button
-        onClick={() => scroll(600)}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full z-10 hover:bg-gray-900"
-      >
-        &gt;
-      </button>
+     
     </div>
-  );
+);
 };
 
+ const section=[
+  {
+    title:"Up to 75% off | Get casual ready from Small Businesses",
+    linkText:"See more",
+    items:[
+    "https://m.media-amazon.com/images/I/510BG1QXhDL._AC_SY170_.jpg",
+    " https://m.media-amazon.com/images/I/51vaKJu6iOL._AC_SY340_.jpg",
+     " https://m.media-amazon.com/images/I/6105IZJUKcL._AC_SY340_.jpg",
+    "https://m.media-amazon.com/images/I/51nIHi7R08L._AC_SY340_.jpg "
+    ],
+  },
+  {
+    title:"Best Sellers in Clothing & Accessories",
+    linkText:"Explore more",
+    items:[
+       "https://m.media-amazon.com/images/I/71mX4WATh-L._AC_SY340_.jpg ",
+      " https://m.media-amazon.com/images/I/81TRdxk1wnL._AC_SY340_.jpg",
+      "https://m.media-amazon.com/images/I/71qJNrZhd1L._AC_SY340_.jpg ",
+    "https://m.media-amazon.com/images/I/51suEsggRLL._AC_SY340_.jpg "
+    ],
+  },
+  {
+    title:"Starting ₹229 | Unique home essentials from nearby stores",
+    linkText:"View all",
+    items:[
+      "https://m.media-amazon.com/images/I/A17z9vJ-TFL._AC_SY110_.jpg ",
+         "https://m.media-amazon.com/images/I/51Y3i8cY1UL._AC_SY340_.jpg ",
+           " https://m.media-amazon.com/images/I/71Ie5i+7JHL._AC_SY340_.jpg",
+               "https://m.media-amazon.com/images/I/418SrGaYN1L._AC_SY340_.jpg "
+    ],
+  },
+  {
+    title:"Home Shopping Spree | Min. 40% off | Home & kitchen…",
+    linkText:"See all offers",
+    items:[
+     "https://m.media-amazon.com/images/I/71ALUhHMH1L._AC_SY340_.jpg ",
+        "https://m.media-amazon.com/images/I/418RPVisJeL._AC_SY340_.jpg",
+       "https://m.media-amazon.com/images/I/71e+WnY7rML._AC_SY340_.jpg ",
+      "https://m.media-amazon.com/images/I/41TXlDE74uL._AC_SY340_.jpg "
+    ]
+  },
+
+]
 
 
-{/*const HorizontalScroll = ({ title,items ,linkText}) => {
-  const scrollRef = useRef(null);
-
-  // Function to scroll left by 6 images (each image is 220px wide)
-  const scrollLeft = () => {
-        if (scrollRef.current) {
-      const container = scrollRef.current;
-      const scrollAmount = container.clientWidth; // Pura container jitna scroll
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    }
-  //if (scrollRef.current)
-     //crollRef.current.scrollBy({ left: -1320, behavior: 'smooth' }); // 6 * 220px = 1320px
-  //}
-  };
-
-  // Function to scroll right by 6 images
-  const scrollRight = () => {
-       if (scrollRef.current) {
-      const container = scrollRef.current;
-      const scrollAmount = container.clientWidth;
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
-  return (
-         <div className="bg-white p-4 rounded-lg shadow-md">
-        <h2 className="text-lg font-bold mb-2 text-center">{title}</h2>
-    <div className="relative w-full">
-      {/* Left Arrow */
-   /*  <button
-        onClick={scrollLeft}
-       className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900" >
-        &lt;
-      </button>
-
-      {/* Horizontal Scrollable Area 
-      <div className="overflow-hidden py-4">*/
-   /*    <div
-          ref={scrollRef}
-          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-4 py-4 px-10"
-        >
-          {items.map((item, index) => (
-            <div key={index} className="flex-shrink-0 w-[200px] bg-white rounded-lg shadow-md p-4">
-                    <h2 className="text-center font-bold mb-2">{item.title}</h2>
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="w-full h-[150px] object-contain mb-2"
-                />
-                <p className="text-sm text-center">{item.label}</p>
-                <a href={item.link} className="text-blue-600 hover:underline text-sm mt-2 block text-center"> {linkText}
-                 </a>
-                 </div>
-                   ))}
-                 </div>
-
-          {/* Right Arrow */
-   /*  <button
-        onClick={scrollRight}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-500 text-white rounded-full p-2 z-10"
-      >
-        &gt;
-      </button>
-              </div>
-              </div>
- 
-   
-  );
-};*/
-      
-
-
-
-
-
-
-const Navbar = () => {
+  const Navbar = () =>{
        
-   
-     /*  const items={[  
-    
-         {img:'  https://m.media-amazon.com/images/I/41ajCrlwCVL._AC_SY400_.jpg '},
-         {img:' https://m.media-amazon.com/images/I/710REZTM6BL._AC_SY400_.jpg '},
-         {img:' https://m.media-amazon.com/images/I/51fRG3cpZtL._AC_SY400_.jpg '},
-         {img:' https://m.media-amazon.com/images/I/71Te8JoONsL._AC_SY400_.jpg '},
-         {img:' https://m.media-amazon.com/images/I/51yWRsXNeTL._AC_SY400_.jpg '},
-          {img:'https://m.media-amazon.com/images/I/51yWRsXNeTL._AC_SY400_.jpg  '}
 
-        ]}*/
+    const productScrollRef = useRef(null);
+    const [cardWidth, setCardWidth] = useState(0);
+    const cardRef = useRef(null);
   
+    // Measure width of one card
+    useEffect(() => {
+      if (cardRef.current) {
+        setCardWidth(cardRef.current.offsetWidth + 16); // +16px for gap (gap-4)
+      }
+    }, []);
+  
+    const scrollProducts = (direction) => {
+      const scrollAmount = cardWidth * 5; // scroll 5 cards at a time
+      if (productScrollRef.current) {
+        productScrollRef.current.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth',
+        });
+      }
+    }
    
+       const products=[
+        {id:1,img:"https://m.media-amazon.com/images/I/611lyTt-JfL._AC_SY400_.jpg",name:"p-1"},
+        {id:2,img:"https://m.media-amazon.com/images/I/51PH6t3t47L._AC_SY400_.jpg",name:"p-2"},  
+        {id:3,img:"https://m.media-amazon.com/images/I/716GH-AC7IL._SX679_.jpg",name:"p-3"},
 
+        {id:4,img:"https://m.media-amazon.com/images/I/51EQIZhk-6L._AC_SY400_.jpg",name:"p-4"},
+        {id:5,img:"https://m.media-amazon.com/images/I/512H4h7FPgL._AC_SY400_.jpg",name:"p-5"},
+        {id:6,img:"https://m.media-amazon.com/images/I/616o-N0f7tL._AC_SY400_.jpg",name:"p-6"},
+        {id:7,img:"https://m.media-amazon.com/images/I/61fRI6Tp3zL._AC_SY400_.jpg",name:"p-7"},
+
+        {id:8,img:"https://m.media-amazon.com/images/I/61-6yDuvBxL._AC_SY400_.jpg",name:"p-8"},
+        {id:9,img:"https://m.media-amazon.com/images/I/61VwuY8hiyL._AC_SY400_.jpg",name:"p-9"},
+        {id:10,img:"https://m.media-amazon.com/images/I/612kNIJYPKL._AC_SY400_.jpg",name:"p-10"},
+        {id:11,img:"https://m.media-amazon.com/images/I/81zSKCAWjbL._AC_SY400_.jpg",name:"p-11"},
+        {id:12,img:"https://m.media-amazon.com/images/I/51EkbomEauL._AC_SY400_.jpg",name:"p-12"}, 
+
+       ]
+       
+    
+    const productScrollRef1 = useRef(null);
+    const [cardWidth1, setCardWidth1] = useState(0);
+    const cardRef1= useRef(null);
+  
+    // Measure width of one card
+    useEffect(() => {
+      if (cardRef1.current) {
+        setCardWidth1(cardRef1.current.offsetWidth + 16); // +16px for gap (gap-4)
+      }
+    }, []);
+  
+    const scrollProducts1 = (direction) => {
+      const scrollAmount1 = cardWidth1 * 5; // scroll 5 cards at a time
+      if (productScrollRef1.current) {
+        productScrollRef1.current.scrollBy({
+          left: direction === 'left' ? -scrollAmount1 : scrollAmount1,
+          behavior: 'smooth',
+        });
+      }
+    }
+
+       const products1=[
+        {id:11,img:" https://m.media-amazon.com/images/I/712n7zx4kNL._AC_SY200_.jpg",name:"p-11"},
+
+        {id:12,img:" https://m.media-amazon.com/images/I/71S7hFzzFxL._AC_SY400_.jpg",name:"p-12"},
+
+        {id:13,img:"https://m.media-amazon.com/images/I/713zDjI9uBL._AC_SY400_.jpg",name:"p-13"},
+
+        {id:14,img:"https://m.media-amazon.com/images/I/312UxAInThL._AC_SY400_.jpg",name:"p-14"},
+
+        {id:15,img:"https://m.media-amazon.com/images/I/71FdJZH4pNL._AC_SY400_.jpg",name:"p-15"},
+
+        {id:16,img:"https://m.media-amazon.com/images/I/51b4Zkj5G3L._AC_SY400_.jpg",name:"p-16"},
+        {id:17,img:"https://m.media-amazon.com/images/I/612KoiaQmBL._AC_SY400_.jpg",name:"p-17"},
+        {id:18,img:"https://m.media-amazon.com/images/I/71UQa8+WORL._AC_SY400_.jpg",name:"p-18"},
+        {id:19,img:"https://m.media-amazon.com/images/I/51+BQcYW2XL._AC_SY400_.jpg",name:"p-19"},
+        {id:20,img:"https://m.media-amazon.com/images/I/71-3sNoyF6L._AC_SY200_.jpg",name:"p-20"}
+       ]
+     
+  
+       const productScrollRef2 = useRef(null);
+       const [cardWidth2, setCardWidth2] = useState(0);
+       const cardRef2= useRef(null);
+     
+       // Measure width of one card
+       useEffect(() => {
+         if (cardRef2.current) {
+           setCardWidth2(cardRef2.current.offsetWidth + 16); // +16px for gap (gap-4)
+         }
+       }, []);
+     
+       const scrollProducts2 = (direction) => {
+         const scrollAmount2 = cardWidth2 * 5; // scroll 5 cards at a time
+         if (productScrollRef2.current) {
+           productScrollRef2.current.scrollBy({
+             left: direction === 'left' ? -scrollAmount2 : scrollAmount2,
+             behavior: 'smooth',
+           });
+         }
+       }
+       const products2=[
+        {id:111,img:"https://m.media-amazon.com/images/I/51u2MqPaQwL._AC_SY400_.jpg ",name:"p-111"},
+
+        {id:112,img:"https://m.media-amazon.com/images/I/61uF50OZzuL._AC_SY400_.jpg",name:"p-112"},
+
+        {id:113,img:"https://m.media-amazon.com/images/I/61mJSikurML._AC_SY400_.jpg",name:"p-113"},
+
+        {id:114,img:"https://m.media-amazon.com/images/I/81lGxS2ZisL._AC_SY400_.jpg",name:"p-114"},
+
+        {id:115,img:"https://m.media-amazon.com/images/I/61NcJuDzfqL._AC_SY400_.jpg ",name:"p-115"},
+
+        {id:116,img:"https://m.media-amazon.com/images/I/41SKH83LjvL._AC_SY400_.jpg ",name:"p-116"},
+        {id:117,img:"https://m.media-amazon.com/images/I/5104paTwzML._AC_SY400_.jpg ",name:"p-117"},
+        {id:118,img:" https://m.media-amazon.com/images/I/51LlDPYPIfL._AC_SY400_.jpg",name:"p-118"},
+        {id:119,img:"https://m.media-amazon.com/images/I/51dAV1h36zL._AC_SY400_.jpg",name:"p-119"},
+        {id:120,img:"https://m.media-amazon.com/images/I/71oXzCK43NL._AC_SY400_.jpg ",name:"p-120"},
+        {id:121,img:" https://m.media-amazon.com/images/I/619PNYrxNAL._AC_SY400_.jpg",name:"p-121"},
+        {id:122,img:"https://m.media-amazon.com/images/I/61H2th1dUdL._AC_SY400_.jpg",name:"p-122"},
+        {id:23,img:" https://m.media-amazon.com/images/I/316sdRiF3ML._AC_SY400_.jpg",name:"p-23"},
+        {id:24,img:"https://m.media-amazon.com/images/I/81KNgp5Oc+L._AC_SY400_.jpg",name:"p-24"},
+
+       ]
+   
+       const productScrollRef3 = useRef(null);
+       const [cardWidth3, setCardWidth3] = useState(0);
+       const cardRef3= useRef(null);
+     
+       // Measure width of one card
+       useEffect(() => {
+         if (cardRef3.current) {
+           setCardWidth3(cardRef3.current.offsetWidth + 16); // +16px for gap (gap-4)
+         }
+       }, []);
+     
+       const scrollProducts3 = (direction) => {
+         const scrollAmount3 = cardWidth3* 5; // scroll 5 cards at a time
+         if (productScrollRef3.current) {
+           productScrollRef3.current.scrollBy({
+             left: direction === 'left' ? -scrollAmount3: scrollAmount3,
+             behavior: 'smooth',
+           });
+         }
+       }
+       const products3=[
+        {id:111,img:"https://m.media-amazon.com/images/I/81R00576YtL._AC_SY400_.jpg ",name:"p-111"},
+
+        {id:112,img:"https://m.media-amazon.com/images/I/61ccEkw+gTL._AC_SY400_.jpg",name:"p-112"},
+
+        {id:113,img:"https://m.media-amazon.com/images/I/71wcI0cjC9L._AC_SY400_.jpg",name:"p-113"},
+
+        {id:114,img:"https://m.media-amazon.com/images/I/51RF-7pCOcL._AC_SY400_.jpg ",name:"p-114"},
+
+        {id:115,img:" https://m.media-amazon.com/images/I/41yiGfGqEpS._AC_SY400_.jpg",name:"p-115"},
+        {id:116,img:"https://m.media-amazon.com/images/I/616jWRUaH0L._AC_SY400_.jpg ",name:"p-116"},
+        {id:117,img:"https://m.media-amazon.com/images/I/61U7yCLqqQL._AC_SY400_.jpg ",name:"p-117"},
+        {id:118,img:"https://m.media-amazon.com/images/I/71obeN772XL._AC_SY400_.jpg ",name:"p-118"},
+        {id:119,img:"https://m.media-amazon.com/images/I/71obeN772XL._AC_SY400_.jpg ",name:"p-119"},
+        {id:120,img:" https://m.media-amazon.com/images/I/61mwHOOonNL._AC_SY400_.jpg",name:"p-120"},
+        {id:121,img:" https://m.media-amazon.com/images/I/51TYLpDzgrL._AC_SY400_.jpg",name:"p-121"},
+        {id:122,img:" https://m.media-amazon.com/images/I/71Tn2CNho6L._AC_SY400_.jpg",name:"p-122"}
+       ]
+
+       const productScrollRef4 = useRef(null);
+       const [cardWidth4, setCardWidth4] = useState(0);
+       const cardRef4= useRef(null);
+     
+       // Measure width of one card
+       useEffect(() => {
+         if (cardRef4.current) {
+           setCardWidth4(cardRef4.current.offsetWidth + 16); // +16px for gap (gap-4)
+         }
+       }, []);
+     
+       const scrollProducts4 = (direction) => {
+         const scrollAmount4 = cardWidth4* 5; // scroll 5 cards at a time
+         if (productScrollRef4.current) {
+           productScrollRef4.current.scrollBy({
+             left: direction === 'left' ? -scrollAmount4: scrollAmount4,
+             behavior: 'smooth',
+           });
+         }
+       }
+       const products4=[
+        {id:1,img:" https://m.media-amazon.com/images/I/91ZVf3kNrcL._AC_SY400_.jpg ",name:"p-1"},
+        {id:2,img:" https://m.media-amazon.com/images/I/51+ROKEYviL._AC_SY400_.jpg ",name:"p-2"},
+        {id:3,img:" https://m.media-amazon.com/images/I/7186aAI6FFL._AC_SY400_.jpg ",name:"p-3"},
+        {id:4,img:"https://m.media-amazon.com/images/I/81F30JDZU9L._AC_SY400_.jpg  ",name:"p-4"},
+        {id:5,img:"  https://m.media-amazon.com/images/I/81-zw2gGCGL._AC_SY400_.jpg ",name:"p-5"},
+        {id:6,img:" https://m.media-amazon.com/images/I/61o5Q8IIq4L._AC_SY400_.jpg",name:"p-6"},
+        {id:7,img:" https://m.media-amazon.com/images/I/81ANaVZk5LL._AC_SY400_.jpg ",name:"p-7"},
+        {id:8,img:" https://m.media-amazon.com/images/I/91QLt2Q-+cL._AC_SY400_.jpg ",name:"p-8"},
+        {id:9,img:"  https://m.media-amazon.com/images/I/81+efMYN9wL._AC_SY400_.jpg",name:"p-9"},
+        {id:10,img:" https://m.media-amazon.com/images/I/812VfWC0-YL._AC_SY400_.jpg ",name:"p-10"},
+        {id:11,img:" https://m.media-amazon.com/images/I/81CgE6pRb0L._AC_SY400_.jpg ",name:"p-11"},
+        {id:12,img:"  https://m.media-amazon.com/images/I/71aOvZBV1cL._AC_SY400_.jpg ",name:"p-12"},
+        {id:13,img:" https://m.media-amazon.com/images/I/71aOvZBV1cL._AC_SY400_.jpg ",name:"p-13"},
+        {id:14,img:" https://m.media-amazon.com/images/I/81AHTyq2wVL._AC_SY400_.jpg ",name:"p-14"},
+        {id:15,img:" https://m.media-amazon.com/images/I/81nrTPws8zL._AC_SY400_.jpg ",name:"p-15"},
+        {id:16,img:" https://m.media-amazon.com/images/I/81oNV2N4nPL._AC_SY400_.jpg ",name:"p-16"},
+        {id:17,img:"https://m.media-amazon.com/images/I/812W6UKfgVL._AC_SY400_.jpg",name:"p-17"},
+        {id:18,img:"https://m.media-amazon.com/images/I/61Wxab6R32L._AC_SY400_.jpg",name:"p-18"},
+        {id:19,img:"https://m.media-amazon.com/images/I/81NSnrzuAeL._AC_SY400_.jpg" ,name:"p-19"},
+        {id:20,img:" https://m.media-amazon.com/images/I/51UBxM+7QzL._AC_SY400_.jpg" ,name:"p-20"}, 
+        {id:21,img:"https://m.media-amazon.com/images/I/81qsstEtrgL._AC_SY400_.jpg", name:"p-21"},
+        {id:22,img:"https://m.media-amazon.com/images/I/71CI8jKGupL._AC_SY400_.jpg" ,name:"p-22"}, 
+        {id:23,img:"https://m.media-amazon.com/images/I/81AbM2vPvPL._AC_SY400_.jpg",name:"p-23"},
+        {id:24,img:" https://m.media-amazon.com/images/I/613znXUaEWL._AC_SY400_.jpg",name:"p-24"},
+        {id:25,img:"https://m.media-amazon.com/images/I/81OkWjcf4WL._AC_SY400_.jpg",name:"p-25"},
+        {id:26,img:"https://m.media-amazon.com/images/I/81Rz9l29NiL._AC_SY400_.jpg" ,name:"p-26"}
+         
+       ]
+       const productScrollRef5= useRef(null);
+       const [cardWidth5, setCardWidth5 ] = useState(0);
+       const cardRef5= useRef(null);
+     
+       // Measure width of one card
+       useEffect(() => {
+         if (cardRef5.current) {
+           setCardWidth5(cardRef5.current.offsetWidth + 16); // +16px for gap (gap-4)
+         }
+       }, []);
+     
+       const scrollProducts5= (direction) => {
+         const scrollAmount5 = cardWidth5* 5; // scroll 5 cards at a time
+         if (productScrollRef5.current) {
+           productScrollRef5.current.scrollBy({
+             left: direction === 'left' ? -scrollAmount5: scrollAmount5,
+             behavior: 'smooth',
+           });
+         }
+       }
+       const products5=[
+        {id:1,img:"https://m.media-amazon.com/images/I/51SxNOrlYWL._AC_SY400_.jpg"},
+        {id:2,img:"https://m.media-amazon.com/images/I/710yBz6hfUL._AC_SY400_.jpg"},
+        {id:3,img:"https://m.media-amazon.com/images/I/61oSwPvRWLL._AC_SY400_.jpg"},
+        {id:4,img:" https://m.media-amazon.com/images/I/71hYbAifNoL._AC_SY400_.jpg"},
+        {id:5,img:" https://m.media-amazon.com/images/I/71S4-NjoTDL._AC_SY400_.jpg  ",name:"p-5"},
+        {id:6,img:"https://m.media-amazon.com/images/I/61bAqtzJ8VL._AC_SY400_.jpg ",name:"p-6"},
+        {id:7,img:" https://m.media-amazon.com/images/I/71SDZVqu3+L._AC_SY400_.jpg ",name:"p-7"},
+        {id:8,img:" https://m.media-amazon.com/images/I/71WGsXRgQrL._AC_SY400_.jpg ",name:"p-8"},
+        {id:9,img:" https://m.media-amazon.com/images/I/81x8s9tASsL._AC_SY400_.jpg ",name:"p-9"},
+        {id:10,img:" https://m.media-amazon.com/images/I/91yuQpw++mL._AC_SY400_.jpg ",name:"p-10"},
+        {id:11,img:" https://m.media-amazon.com/images/I/61HHXRkRz6L._AC_SY400_.jpg ",name:"p-11"},
+        {id:12,img:" https://m.media-amazon.com/images/I/41+Ar1-6FbL._AC_SY400_.jpg  ",name:"p-12"},
+        {id:13,img:"https://m.media-amazon.com/images/I/71I2r88GXhL._AC_SY400_.jpg",name:"p-13"},
+        {id:14,img:" https://m.media-amazon.com/images/I/61v3jWr-AlL._AC_SY400_.jpg ",name:"p-14"},
+        {id:15,img:" https://m.media-amazon.com/images/I/71wm42EtoNL._AC_SY400_.jpg ",name:"p-15"},
+        {id:16,img:" https://m.media-amazon.com/images/I/7194yVwYXFL._AC_SY400_.jpg",name:"p-16"},
+        {id:17,img:" https://m.media-amazon.com/images/I/71UJx0RZinL._AC_SY400_.jpg",name:"p-17"},
+        {id:18,img:"https://m.media-amazon.com/images/I/51CtR+quteL._AC_SY400_.jpg ",name:"p-18"},
+        {id:19,img:"https://m.media-amazon.com/images/I/71wg8cNATZL._AC_SY400_.jpg" ,name:"p-19"},
+        {id:20,img:"https://m.media-amazon.com/images/I/71DxWxvCwlL._AC_SY400_.jpg " ,name:"p-20"}, 
+        {id:21,img:" https://m.media-amazon.com/images/I/71Iwj1RwoxL._AC_SY400_.jpg", name:"p-21"},
+        {id:22,img:" https://m.media-amazon.com/images/I/71XEfI+E++L._AC_SY400_.jpg" ,name:"p-22"}, 
+        {id:23,img:" https://m.media-amazon.com/images/I/71ma9Z+nn0L._AC_SY400_.jpg",name:"p-23"},
+        {id:24,img:" https://m.media-amazon.com/images/I/81Mb+wFuOML._AC_SY400_.jpg",name:"p-24"},
+        {id:25,img:"https://m.media-amazon.com/images/I/61vh3p7XXUL._AC_SY400_.jpg",name:"p-25"},
+        {id:26,img:"https://m.media-amazon.com/images/I/81RBY5RQKpL._AC_SY400_.jpg" ,name:"p-26"}
+         
+       ]
 
  const containerRef=useRef(null);
 const images=[
   "https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/71h15GsHkvL._SX3000_.jpg",
   "https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg",
   "https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg",
   "https://m.media-amazon.com/images/I/61A-FJoXloL._SX3000_.jpg",
@@ -206,7 +397,7 @@ const images=[
 
   return (
     
-    <header className="bg-gray-300 text-white">
+    <header className="bg-gray-300 text-white ml-3">
      {/* <div className="bg-gray-200">*/}
       <div className="flex items-center  justify-between p-2 px-4  gap-3 flex-wrap bg-black">
 
@@ -245,7 +436,7 @@ const images=[
 
         {/* Language */}
         <div className='flex items-center  text-sm '>
-        	<img src="https://tse1.mm.bing.net/th?id=OIP.YHufaYYtdq8EtHQRPAx_9QHaE8&pid=Api&P=0&h=220" alt="flag"className="w-8 h-5 object-contain"/>
+        	<img className="w-8 h-5 object-contain"  src= " https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_India.png " alt="flag"/>
    
 
         <select className="hidden sm:flex items-center  text-sm ">
@@ -292,7 +483,7 @@ const images=[
    <span className="text-white text-sm font-medium cursor-pointer ">Home & Kitchen</span>
 </div>
 
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden ">
       <button
         onClick={() => scroll("left")}
         className="absolute left-2 top-1/2 -translate-y-1/2 z-10 text-3xl font-bold bg-white bg-opacity-60 px-3 py-1 rounded-full shadow"
@@ -427,25 +618,470 @@ const images=[
           ]}
              
         />
- 
-        <ProductCard
-        title="MAHI"
-        linkText="see"
-        items={[
-             {img:"https://wallpapercave.com/wp/wp2525416.jpg",label:"boy"},
-             
-    
-        ]}
-      />
+       
+       
+       <div className="relative w-screen mt-5 bg-gray-50">
+      {/* Scrollable row of cards */}
+      <div className="flex justify-between items-center px-4 mb-2 bg-white-50">
+     
+        <h2 href='#'className='text-gray-600  font-bold mb-2'>
+        Up to 60% off | Best offers on kitchen products | Amazon Launchpad </h2>
+        <a href='#'className='text-blue-600 text-sm hover:underline'>view all</a> 
+
         </div>
- 
-                       
+        <products
+          title="
+          Up to 60% off | Best offers on kitchen products | Amazon Launchpad"
+          linkText="Explore all"
+        />
+        <div
+        ref={productScrollRef}
+        className="flex overflow-x-auto gap-4 px-4 scroll-smooth scrollbar-hide"
+      >
+        {products.map((product, index) => (
+          <img
+            key={product.id}
+            ref={index === 0 ? cardRef : null}
+            src={product.img}
+            alt=""
+            className="w-58 h-58 object-cover flex-shrink-0 rounded-md"
+          />
+        ))}
+      </div>
+
+      {/* Left Scroll Button */}
+      <button
+        onClick={() => scrollProducts("left")}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8592;
+      </button>
+
+      {/* Right Scroll Button */}
+      <button
+        onClick={() => scrollProducts("right")}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8594;
+      </button>
+      </div>
+      </div>
+    {/* ======================================================/*}
+        
+       <div className="relative w-screen mt-4 bg-gray-50">
+      {/* Scrollable row of cards */}
+         <div className="relative w-screen mt-8 bg-gray-50">
+      <div className="flex justify-between items-center px-4 mb-2 bg-white-50">
+     
+     <h2 className='text-gray-600 font-bold'>
+     Min. 30% off | Handpicked products from Small Businesses</h2>
+     <a href='#'className='text-blue-600 text-sm hover:underline mb-5 '>See more</a> 
+
+     </div>
+     <products1
+       title=" Min. 30% off | Handpicked products from Small Businesses
+       "
+       linkText="See more"
+     />
+         <div
+        ref={productScrollRef1}
+        className="flex overflow-x-auto gap-4 px-4 scroll-smooth scrollbar-hide"
+      >
+        {products1.map((products1, index) => (
+          <img
+            key={products1.id}
+            ref={index === 0 ? cardRef1 : null}
+            src={products1.img}
+            alt=""
+            className="w-48 h-48 object-cover flex-shrink-0 rounded-md"
+          />
+        ))}
+         <button
+        onClick={() => scrollProducts1("left")}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8592;
+      </button>
+
+      {/* Right Scroll Button */}
+      <button
+        onClick={() => scrollProducts1("right")}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8594;
+      </button>
+      </div>
+      </div>  
+
+
+
+   <div className=' p-4 mt-6'>
+      <div className="grid grid-cols-4 gap-4">
+        {section.map((section, index) => (
+          <div
+            key={index}
+            className=" bg-white shadow rounded p-2 flex flex-col items-center"
+          >
+            <h2 className="text-lg text-gray-600 font-bold mb-3">{section.title}</h2>
+        
+            <div className="grid grid-cols-2  gap-6">
+              {section.items.map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  alt="product"
+                  className="h-[100px] w-[120px] object-cover rounded"
+                />
+              ))}
+                   <a href='#'className='text-blue-600 text-sm hover:underline mb-3 '>{section.linkText}</a>
+            </div>
+        
+          
+          </div>
+        ))}
+       
+      </div>
+      </div>
+  
+
+    {/* =================================================================================================== */}
+    <div className="relative w-screen mt-6 bg-gray-50">
+      <div className="flex justify-between items-center px-4 mb-2 bg-white-50 ">
+     
+     <h2 className='text-gray-600 font-bold'>
+     Up to 50% off | Electronics & accessories from stores near you </h2>
+     <a href='#'className='text-blue-600 text-sm hover:underline mb-5 '>See all offers</a> 
+
+     </div>
+     <products2
+       title="    Up to 50% off | Electronics & accessories from stores near you   "
+       linkText="See all offers"
+     />
+         <div
+        ref={productScrollRef2}
+        className="flex overflow-x-auto gap-4 px-4 scroll-smooth scrollbar-hide"
+      >
+        {products2.map((products2, index) => (
+          <img
+            key={products2.id}
+            ref={index === 0 ? cardRef2 : null}
+            src={products2.img}
+            alt=""
+            className="w-48 h-48 object-cover flex-shrink-0 rounded-md"
+          />
+        ))}
+         <button
+        onClick={() => scrollProducts2("left")}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8592;
+      </button>
+
+      {/* Right Scroll Button */}
+      <button
+        onClick={() => scrollProducts2("right")}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8594;
+      </button>
+      </div>
+      </div>  
+
+{/* ======================================================================================*/}
+<div className="relative w-screen mt-6 bg-gray-50">
+      <div className="flex justify-between items-center px-4 mb-2 bg-white-50 ">
+     
+     <h2 className='text-gray-600 font-bold'>
+     
+Up to 60% off | Trending products from Emerging Businesses </h2>
+     <a href='#'className='text-blue-600 text-sm hover:underline mb-5 '>See more</a> 
+
+     </div>
+     <products3
+       title=" Up to 60% off | Trending products from Emerging Businesses   "
+       linkText="See more"
+     />
+         <div
+        ref={productScrollRef3}
+        className="flex overflow-x-auto gap-4 px-4 scroll-smooth scrollbar-hide"
+      >
+        {products3.map((products3, index) => (
+          <img
+            key={products3.id}
+            ref={index === 0 ? cardRef3 : null}
+            src={products3.img}
+            alt=""
+            className="w-48 h-48 object-cover flex-shrink-0 rounded-md"
+          />
+        ))}
+         <button
+        onClick={() => scrollProducts3("left")}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8592;
+      </button>
+
+      {/* Right Scroll Button */}
+      <button
+        onClick={() => scrollProducts3("right")}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8594;
+      </button>
+      </div>
+      </div>
+
+      <div className="bg-white p-4 rounded shadow max-w-240 h-60 mt-4 ml-60 pl-10  pt-10 ">
+    <div className="flex space-x-2 items-center">
+      
+      
+      <img src= "https://tse2.mm.bing.net/th?id=OIP.1jsiTZe2Do1BGlm5soeW7gHaHa&pid=Api&P=0&h=220" alt="Brand" className="w-20 h-20 object-contain" />
+      
+     
+      
+      
+        <img src="https://m.media-amazon.com/images/I/716GH-AC7IL._SX679_.jpg" alt="Product" className="w-24 h-24 object-contain mb-2" />
+        
+       
+        <p className="text-sm text-gray-800 font-medium leading-snug  ">
+          OH CHA Brass Tea Infuser, Ball Shaped | BPA Free, Includes Green Tea | Filter...
+        </p>
+        </div>
+
+        <div className="mt-1 text-sm flex items-center pl-50">
+          <span className='font-bold text-gray-500'>3⭐⭐⭐4.7</span>
+          </div>
+
+          <div className='mt-1 text-sm flex items-center pl-50'>
+          <span className="bg-red-600 text-white-600 font-bold">Limited time deal</span>
+          </div>
+          <div className='mt-1 text-sm flex items-center pl-50'>
+          <span className="text-green-500 text-lg ml-2 font-bold" >23% off</span>
+          <span className="text-gray-600  ml-2 text-lg font-medium"><sup>₹</sup>502<sup>00</sup></span>
+         <span className='text-gray-600 text-md ml-2 font-semibold'>M.R.P.:</span>
+          <span className="text-gray-600 line-through ml-2 text-md font-smibod">₹650.00</span>
+
+          <svg class="h-5 w-5 text-yellow-600 pl-1 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+  </svg>
+  <span class="text-md font-medium text-blue-500">prime</span>
+
+
+       
+        </div>
+        </div>
+        <br></br>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <ProductCard1
+          title="Best Sellers in Sports, Fitness & Outdoors"
+          items={[      
+            { img: "https://m.media-amazon.com/images/I/710SxepIfiL._AC_SY340_.jpg"},
+            { img: "https://m.media-amazon.com/images/I/61Av1lptLkL._AC_SY340_.jpg" },
+            { img: "https://m.media-amazon.com/images/I/61pqeHoXFZL._AC_SY340_.jpg"},
+            { img: "https://m.media-amazon.com/images/I/71LFB0J7Z4L._AC_SY340_.jpg"}
+          ]}
+          />
+             <ProductCard1
+          title="Customers’ Most-Loved Fashion for you"
+          items={[      
+            { img: "https://m.media-amazon.com/images/I/616iBhe2roL._AC_SY145_.jpg "},
+            { img: "https://m.media-amazon.com/images/I/61H548ZWlEL._AC_SY290_.jpg"},
+            { img: "https://m.media-amazon.com/images/I/61BjE6XZ+KL._AC_SY290_.jpg"},
+            { img: "https://m.media-amazon.com/images/I/71AcV5DVTdL._AC_SY290_.jpg"}
+          
+          ]}
+          />
+                <ProductCard1
+          title="Up to 60% off | Best offers on kitchen products | Amazon…"
+          items={[      
+            { img: "https://m.media-amazon.com/images/I/61-6yDuvBxL._AC_SY350_.jpg "},
+            { img: " https://m.media-amazon.com/images/I/61VwuY8hiyL._AC_SY350_.jpg"},
+            { img: "https://m.media-amazon.com/images/I/612kNIJYPKL._AC_SY175_.jpg" },
+            { img: "https://m.media-amazon.com/images/I/51PH6t3t47L._AC_SY350_.jpg "}
+          
+          ]}
+          />
+                <ProductCard1
+          title="Starting ₹199 | Kids’ favorite top rated toys "
+          items={[  
+            { img: " https://m.media-amazon.com/images/I/41WVOijNi1L._AC_SY350_.jpg"},
+            { img: " https://m.media-amazon.com/images/I/51DPplxxK9L._AC_SY175_.jpg"},
+            { img: " https://m.media-amazon.com/images/I/41Pmnm087yL._AC_SY175_.jpg"},
+            { img: " https://m.media-amazon.com/images/I/51i0he92iTL._AC_SY175_.jpg"}
+          ]}
+          />
+   </div>
+  
+   <div className="relative w-screen mt-8 bg-gray-50">
+      <div className="flex justify-between items-center px-4 mb-2 bg-white-50">
+     
+     <h2 className='text-gray-600 font-bold'>
+     Best Sellers in Books</h2>
+     <a href='#'className='text-blue-600 text-sm hover:underline mb-5 '></a> 
+
+     </div>
+     <products4
+       title="Best Sellers in Books
+       "
+       linkText=""
+     />
+         <div
+        ref={productScrollRef4}
+        className="flex overflow-x-auto gap-4 px-4 scroll-smooth scrollbar-hide"
+      >
+        {products4.map((products4, index) => (
+          <img
+            key={products4.id}
+            ref={index === 0 ? cardRef4 : null}
+            src={products4.img}
+            alt=""
+            className="w-48 h-48 object-cover flex-shrink-0 rounded-md"
+          />
+        ))}
+         <button
+        onClick={() => scrollProducts4("left")}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8592;
+      </button>
+
+      {/* Right Scroll Button */}
+      <button
+        onClick={() => scrollProducts4("right")}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8594;
+      </button>
+      </div>
+      </div>  
+      
+   <div className="relative w-screen mt-8 bg-gray-50">
+      <div className="flex justify-between items-center px-4 mb-2 bg-white-50">
+     
+     <h2 className='text-gray-600 font-bold'>
+     Best Sellers in Sports & Outdoors</h2>
+     <a href='#'className='text-blue-600 text-sm hover:underline mb-5 '></a> 
+
+     </div>
+     <products5
+       title="Best Sellers in Sports & Outdoors
+       "
+       linkText=""
+     />
+         <div
+        ref={productScrollRef5}
+        className="flex overflow-x-auto gap-4 px-4 scroll-smooth scrollbar-hide"
+      >
+        {products5.map((products5, index) => (
+          <img
+            key={products5.id}
+            ref={index === 0 ? cardRef5 : null}
+            src={products5.img}
+            alt=""
+            className="w-48 h-48 object-cover flex-shrink-0 rounded-md"
+          />
+        ))}
+         <button
+        onClick={() => scrollProducts5("left")}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8592;
+      </button>
+
+      {/* Right Scroll Button */}
+      <button
+        onClick={() => scrollProducts5("right")}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-100 bg-opacity-70 hover:bg-white p-2 rounded-full shadow z-10"
+      >
+        &#8594;
+      </button>
+      </div>
+      </div>  
+      <footer className="bg-gray-800 text-white mt-10">
+  {/* Back to Top */}
+  <div className="bg-gray-700 text-center py-3 cursor-pointer hover:bg-gray-600">
+    <p className="text-md">Back to top</p>
+  </div>
+
+  {/* Main Footer Links */}
+  <div className="max-w-6xl mx-auto py-8 px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+    <div>
+      <h3 className="font-bold mb-2">Get to Know Us</h3>
+      <ul>
+        <li className="mb-1 hover:underline cursor-pointer">About Us</li>
+        <li className="mb-1 hover:underline cursor-pointer">Careers</li>
+        <li className="mb-1 hover:underline cursor-pointer">Press Releases</li>
+        <li className="mb-1 hover:underline cursor-pointer">Amazon Science</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-bold mb-2">Connect with Us</h3>
+      <ul>
+        <li className="mb-1 hover:underline cursor-pointer">Facebook</li>
+        <li className="mb-1 hover:underline cursor-pointer">Twitter</li>
+        <li className="mb-1 hover:underline cursor-pointer">Instagram</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-bold mb-2">Make Money with Us</h3>
+      <ul>
+        <li className="mb-1 hover:underline cursor-pointer">Sell on Amazon</li>
+        <li className="mb-1 hover:underline cursor-pointer">Sell under Amazon Accelerator</li>
+        <li className="mb-1 hover:underline cursor-pointer">Protect and Build Your Brand</li>
+        <li className="mb-1 hover:underline cursor-pointer">Amazon Global Selling</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-bold mb-2">Let Us Help You</h3>
+      <ul>
+        <li className="mb-1 hover:underline cursor-pointer">Your Account</li>
+        <li className="mb-1 hover:underline cursor-pointer">Returns Centre</li>
+        <li className="mb-1 hover:underline cursor-pointer">100% Purchase Protection</li>
+        <li className="mb-1 hover:underline cursor-pointer">Help</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* Language & Country 
+  <div className="border-t border-gray-600 py-4 text-center text-xs text-gray-800">
+    <p>© 2025 Amazon Clone. Built by khushi using Tailwind CSS.</p>
+  </div>
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <p className="text-sm md:text-base text-white-800 hover:text-pink  transition duration-300 ease-in-out">
+      © 2025 Amazon Clone. Designed with ❤ by [Your Name]. All rights reserved.
+    </p>
+  </div>*/}
+<div className=" bg-gray-900 text-white py-4">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+      © 2025 Amazon Clone. Designed by khushi. All rights reserved.
+   
+  </div>
+</div>
+</footer>
+
+
+
+
+
+
+
+     
+
+
+             
+      
+
+   
+
+
+              
     </header>
-   
-
-   
   );
-}
+};
 
-export default Navbar;
+  
+ export default Navbar;
 
